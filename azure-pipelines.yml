@@ -18,8 +18,10 @@ steps:
     echo See https://aka.ms/yaml
 - task: owaspzap@1
   inputs:
+    aggressivemode: true
+    threshold: '200'
     scantype: 'targetedScan'
-    url: 'https://demo.testfire.net/'
+    url: 'https://www.geeksforgeeks.org/'
   
 - task: PublishBuildArtifacts@1
   inputs:
