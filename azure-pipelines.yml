@@ -16,5 +16,17 @@ steps:
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+- task: owaspzap@1
+  inputs:
+    threshold: '200'
+    scantype: 'targetedScan'
+    url: 'https://uat-changemanagement.accenture.com'
+    provideCustomContext: true
+    contextPath: '**/OwaspContext.context'
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    
+
 
