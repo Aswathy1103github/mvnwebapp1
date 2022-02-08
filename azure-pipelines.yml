@@ -18,11 +18,9 @@ steps:
     echo See https://aka.ms/yaml
 - task: owaspzap@1
   inputs:
-    threshold: '200'
     scantype: 'targetedScan'
-    url: 'https://uat-changemanagement.accenture.com'
-    provideCustomContext: true
-    contextPath: '**/OwaspContext.context'
+    url: 'https://demo.testfire.net'
+  
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
