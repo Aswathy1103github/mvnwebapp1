@@ -23,8 +23,8 @@ steps:
   
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Build.SourcesDirectory)'
-    ArtifactName: 'drop'
+    PathtoPublish: '$(Build.SourcesDirectory)/owaspzap'
+    ArtifactName: 'ZAP Reports'
 - bash: |
    sudo npm install -g handlebars-cmd
 
