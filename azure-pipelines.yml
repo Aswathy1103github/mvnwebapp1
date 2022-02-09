@@ -21,7 +21,7 @@ steps:
     aggressivemode: true
     threshold: '200'
     scantype: 'targetedScan'
-    url: 'https://demo.testfire.net/'
+    url: 'https://uat-changemanagement.accenture.com/'
 
 - task: PublishBuildArtifacts@1
   inputs:
