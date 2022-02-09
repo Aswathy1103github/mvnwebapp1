@@ -19,9 +19,11 @@ steps:
 - task: owaspzap@1
   inputs:
     aggressivemode: true
-    threshold: '900'
+    threshold: '1000'
     scantype: 'targetedScan'
     url: 'https://uat-changemanagement.accenture.com/'
+    provideCustomContext: true
+    contextPath: '$(System.DefaultWorkingDirectory)/OwaspContext.context'
 
 - task: PublishBuildArtifacts@1
   inputs:
