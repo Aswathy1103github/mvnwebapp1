@@ -21,7 +21,7 @@ steps:
     aggressivemode: true
     threshold: '200'
     scantype: 'targetedScan'
-    url: 'https://www.geeksforgeeks.org/'
+    url: 'https://demo.testfire.net/'
   
 - task: PublishBuildArtifacts@1
   inputs:
