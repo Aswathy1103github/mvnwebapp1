@@ -19,7 +19,7 @@ steps:
 - task: owaspzap@1
   inputs:
     aggressivemode: true
-    threshold: '200'
+    threshold: '900'
     scantype: 'targetedScan'
     url: 'https://uat-changemanagement.accenture.com/'
 
